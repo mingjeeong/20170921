@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +15,7 @@
 	}
 	
 	function useId2() {
-		console.log("ddd");
+		console.log("dwww");
 		//checkMemberId 이게 아이디인 객체를 어떻게 표현할래
 		console.log(document.getElementById('checkMemberId').value);
 		window.opener.document.getElementById('userid').value=document.getElementById('checkMemberId').value;
