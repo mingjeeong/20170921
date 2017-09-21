@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>01ModelSerlet</display-name>
+  <welcome-file-list>
+    <welcome-file>	Index.jsp</welcome-file>
+
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <servlet-name>EngFrontController</servlet-name>
+    <servlet-class>work.controller.FrontController
+    </servlet-class>
+    <init-param>
+    	<param-name>title</param-name>
+    	<param-value>Hello Servlet</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>name</param-name>
+    	<param-value>kosta </param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EngFrontController</servlet-name>
+    <url-pattern>/controller</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <servlet-name>KorFrontController</servlet-name>
+    <servlet-class>work.controller.FrontController
+    </servlet-class>
+    <init-param>
+    	<param-name>title</param-name>
+    	<param-value>안녕 서블릿</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>name</param-name>
+    	<param-value>코스타</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KorFrontController</servlet-name>
+    <url-pattern>/kor/controller</url-pattern>
+  </servlet-mapping>
+  
+  
+ <!--  -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/404.jsp</location>
+  </error-page>
+  
+  <!-- exception class 단위 설정 -->
+  <error-page> 	
+  	<exception-type>java.lang.ArithmeticException</exception-type>
+  	<location>/ArithmeticException.jsp</location>
+  </error-page>
+  <error-page> 	
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/commonException.jsp</location>
+  </error-page>
+  <error-page> 	
+  	<exception-type>java.lang.NumberFormatException</exception-type>
+  	<location>/commonException.jsp</location>
+  </error-page>
+</web-app>
